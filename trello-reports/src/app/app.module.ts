@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardlistComponent } from './cardlist/cardlist.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     NavbarComponent,
-    CardlistComponent
+    CardlistComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
