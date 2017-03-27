@@ -1,0 +1,5 @@
+.panel-body {
+  overflow-x: scroll;
+  width: 130rem;
+  height: 50rem;
+}

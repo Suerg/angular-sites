@@ -8,13 +8,14 @@ import { Card } from '../models/card';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  public myCard: Card;
+
   @Input()
   public title: string;
 
   @Input()
   public description: string;
 
-  public myCard: Card;
 
   constructor() {
 
