@@ -18,3 +18,6 @@
 button {
     transform: rotate(90deg);
 }
+.navbar {
+  margin-bottom: 0px;
+}
