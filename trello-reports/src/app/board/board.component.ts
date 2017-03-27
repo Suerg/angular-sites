@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Board } from '../models/board';
+import { DataService } from '../services/data.service';
+
 @Component({
   selector: 'board',
   templateUrl: './board.component.html',
@@ -7,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
   public name: string = 'Board 1';
+  public myBoard: Board;
 
-  constructor() { }
+  constructor(private dataService: DataService) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.loadData();
+  }
+
+  public loadData() {
+    /* fetch the board with the given id */
+    this.myBoard = this.dataService.getBoard(1);
+  }
 }
