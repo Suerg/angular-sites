@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Card } from '../models/card';
 
 @Component({
   selector: 'card',
@@ -6,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  private name: string = 'Bob';
+  @Input()
+  public title: string;
 
-  constructor() { }
+  @Input()
+  public description: string;
+
+  public myCard: Card;
+
+  constructor() {
+
+  }
 
   ngOnInit() {
+    // this.myCard = new Card('Forms to sign', 'there are various forms'+
+    //   ' that need to be signed ASAP.');
+    this.myCard = new Card(this.title, this.description);
   }
 
 }
