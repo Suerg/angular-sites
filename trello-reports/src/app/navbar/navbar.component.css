@@ -12,5 +12,9 @@
 }
 .dropdown-toggle {
   width: 7em;
-  height: 2.5em;
+  margin: 0.1em;
+  margin-top: -0.5em;
+}
+button {
+    transform: rotate(90deg);
 }
