@@ -28,6 +28,15 @@ export class DataService {
 
       this._boards = new Array<Board>();
       this._boards.push(board);
+
+
+      /* simple demo of making http GET request to API */
+      /*
+      this.http.get('https://reqres.in/api/users')
+        .subscribe(data => {
+            console.log(data.json().data);
+        });
+      */
     }
 
     public getBoard(id: number): Board {
@@ -37,6 +46,10 @@ export class DataService {
         }
       }
       return null;
+    }
+
+    public getBoards(): Array<Board> {
+        return this._boards;
     }
 
     public getCard(): Card {
